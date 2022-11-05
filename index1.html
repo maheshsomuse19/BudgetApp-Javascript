@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy -->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/style1.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container-fluid m-0" >
+        <div class="container my-4 border rounded-4" style="background-color: #293462;">
+            <div class="row">
+                <div class="col-sm-4">
+
+                <div class="card my-3" style="width: 18rem;background-color:  #293462;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREX7pmiYsFUwA-opG0WKGaA5qlwdyLCe9uZg&usqp=CAU" style="border-radius: 150px;height:100px;width:100px;margin-left: 20px;" class="card-img-top" alt="bg-missing" />
+                    <div class="card-body">
+                      <h2 class="card-title text-danger">Mahesh Somuse</h2>
+                      
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-8 my-5">
+                    <h1 class="text-white" style="font-size: 80px;">Budget App</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 my-1">
+                    <div class="firstdiv mt-5 bg-white border rounded-3">
+                    <h2 class="text-center fs-1">Budget</h2>
+                         <form>
+                            <div class="form-group">
+                              <h3 for="text" class="mt-4">Enter Budget:</h3>
+                                <input type="text" class="form-control" id="inputBudget" placeholder="Enter budget" name="budget">
+                            </div>
+                            <button type="button" id="addBudget" class="btn btn-default my-3 px-5 bg-warning">ADD</button>
+                            
+                        </form>
+                    </div>    
+
+                    <div class="seconddiv my-3 bg-white border rounded-3">
+
+                    <h2 class="text-center fs-1">Expence Manager</h2>
+                    <form>
+                       <div class="form-group">
+                         <h3 for="text" class="mt-4">Enter Expence Item:</h3>
+                           <input type="text" class="form-control" id="expenceInputName" placeholder="Enter expence item" name="email">
+                       </div>
+                       <div class="form-group">
+                        <h3 for="text" class="mt-4">Enter Expence Amount:</h3>
+                          <input type="text" class="form-control" id="expenceInputAmount" placeholder="Enter amount" name="email">
+                      </div>
+                       <button type="button" class="btn btn-default my-3 mx-5 px-5 bg-warning" id="expencesubmit">SUBMIT</button>
+                       <button type="button" class="btn btn-default my-3 mx-5 px-5 bg-warning" id="expenceclear">CLEAR</button>
+                   </form>
+                   </div>
+
+
+                </div>
+                <div class="col-sm-7 my-5 ">
+                    <div class="thirddiv  bg-white border rounded-3">
+                    <div class="row">
+                        <div class="col-sm-4  text-center my-3">
+                            <h1>Budget</h1>
+                            <i style="font-size:60px; color: #E8AA42;" class="fa my-3">&#xf0d6;</i><br>
+                            <!-- <input type="text" class="form-control  my-3" id="budget"  name="text"> -->
+                            <span><i style="font-size:40px;" class="fa text-danger">&#xf155;</i></span>
+                            <span id="amountBudget" class="h1 text-danger">0</span>
+                           
+
+                            
+
+                        
+
+                        </div>
+                        <div class="col-sm-4 text-center my-3">
+                            <h1>Expences</h1>
+                            <i style="font-size:60px; color: #E8AA42;" class="fa my-3">&#xf09d;</i><br>
+                            <!-- <input type="text" class="form-control  my-3 text-danger" id="budget"  name="text"> -->
+                            <span><i style="font-size:40px;" class="fa text-danger">&#xf155;</i></span>
+                            <span class="h1 text-danger" id="expenceOutputAmount">0</span>
+                           
+
+
+                        </div>
+                        <div class="col-sm-4 text-center my-3">
+                            <h1>Balance</h1>
+                            <i style="font-size:60px; color: #E8AA42;" class="fa my-3">&#xf155;</i><br>
+                            <!-- <input type="text" class="form-control my-3" id="budget"  name="text"> -->
+                            <span><i style="font-size:40px;" class="fa text-danger">&#xf155;</i></span>
+                            <span id="balanceInput" class="h1 text-danger">0</span>
+                           
+
+
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="fourthdiv bg-white border rounded-3 my-4">
+                      
+                        <!-- <span class="mx-5 fs-2">Name</span><span class="mx-5 fs-2">Amount</span><span class="action mx-5 fs-2">Action</span>
+                        <table id="table" class="tabledata">
+                          <tbody>
+                          <tr>
+                            <td class="tabledata">pen</td>
+                            <td class="tabledata">Row 1</td>
+                            <td class="tablebutton" id="deletebtn"><input id="deletebtn" type="button" value="Delete" onclick="deleteRow(this)"></td>
+                          </tr>
+                        </tbody>
+                        </table>
+                         -->
+
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <ul id="myList1">
+                              <li class="h2">Ex_Name</li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <ul id="myList2">
+                              <li class="h2">Amount</li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4 px-5">
+                            <ul id="myList3" >
+                              <li class="h2">Action</li>
+                            </ul>
+                          </div>
+                        </div> 
+
+                    </div>
+                </div>
+
+
+
+
+                </div>
+              </div>
+            
+        </div>
+
+    </div>
+    <script src="./JS/script1.js"></script>
+  </body>
+</html>
